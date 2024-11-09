@@ -1,0 +1,340 @@
+/* General styles for all pages */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffe5d9; /* Warm peach background for all pages */
+    color: #333;
+    transition: background-color 0.5s ease; /* Smooth transition effect for background color changes */
+}
+
+/* Header styling for all pages */
+header {
+    background-color: #ff7f50; /* Coral background for header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background transition on hover */
+}
+
+header:hover {
+    background-color: #ff5e3a; /* Slight darkening effect on hover */
+}
+
+/* Login, Sign Up, Forgot Password Pages */
+.login-page, .signup-page, .forgot-password-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container for login, signup, forgot password */
+.login-container, .signup-container, .forgot-password-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Adjusted for signup page to fit more fields */
+    transform: scale(0.98); /* Slightly shrink form container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+}
+
+.login-container:hover, .signup-container:hover, .forgot-password-container:hover {
+    transform: scale(1); /* Return to normal size on hover */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Intensify shadow effect */
+}
+
+/* Common form heading styles */
+.login-form h2, .signup-form h2, .forgot-password-form h2 {
+    text-align: center;
+    color: #ff6f61; /* Soft red */
+    margin-bottom: 20px;
+}
+
+/* Styling for new section titles */
+.signup-form h3 {
+    text-align: center;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    font-size: 22px; /* Slightly smaller than the main heading */
+}
+
+/* Input field group styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 111, 97, 0.2);
+    font-size: 16px;
+    transition: box-shadow 0.3s ease; /* Smooth shadow change when focused */
+}
+
+.input-group input:focus {
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.5); /* Increase shadow when input is focused */
+}
+
+/* Button styling for login, signup, forgot password */
+.login-btn, .signup-btn, .forgot-password-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7f50; /* Coral background for buttons */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 127, 80, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover, .signup-btn:hover, .forgot-password-btn:hover {
+    background-color: #ff5e3a; /* Darker coral on hover */
+    transform: translateY(-3px); /* Button lift effect on hover */
+}
+
+/* Options for links (e.g., forgot password, sign up) */
+.options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.options a {
+    color: #ff6f61; /* Soft red */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.options a:hover {
+    text-decoration: underline;
+    color: #ff3c1a; /* Darker red on hover */
+}
+
+/* New section for separating form areas */
+.form-section {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Floor Plan Page */
+.floorplan-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffe5d9;
+}
+
+.floorplan-container {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    transition: transform 0.3s ease; /* Smooth transition for container */
+}
+
+.room {
+    background-color: #fff;
+    border: 2px solid #ff7f50;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.room:hover {
+    background-color: #ff7f50;
+    color: white;
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.room span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Back to Floor Plan button */
+.back-to-floorplan {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-floorplan button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(255, 127, 80, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-floorplan button:hover {
+    background-color: #ff5e3a;
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Control Page (Living Room, etc.) */
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+}
+
+.device-control {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.device-control:hover {
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Intensify shadow */
+}
+
+/* Curtain Control */
+.curtain {
+    width: 100px;
+    height: 120px;
+    background-color: #ffcc66;
+    margin: 0 auto 10px;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.5s ease; /* Smooth height transition */
+}
+
+.curtain.closed::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b5651d;
+    top: 0;
+    transition: height 0.5s ease;
+}
+
+.curtain.open::before {
+    height: 0;
+}
+
+/* Light Control */
+.light-bulb {
+    width: 60px;
+    height: 100px;
+    background-color: rgba(255, 255, 0, 0.7);
+    margin: 0 auto 10px;
+    border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.7);
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.light-bulb:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 0, 1); /* Intensify light on hover */
+}
+
+/* Air Conditioner Control */
+.ac-dial {
+    width: 120px;
+    height: 120px;
+    background-color: #ffcc66;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.ac-dial:hover {
+    transform: rotate(5deg); /* Small rotation on hover */
+}
+
+.ac-dial .dial-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Logout button styling */
+.logout-btn {
+    background-color: #ff5e3a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+    margin-right: 20px;
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #ff3c1a;
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+.light-bulb.off {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+.ac-dial.off {
+    background-color: #ddd;
+}
+.curtain-container {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: #b5651d;
+    transition: width 0.5s ease;
+}
+
+.curtain-left {
+    left: 0;
+    width: 50%;
+}
+
+.curtain-right {
+    right: 0;
+    width: 50%;
+}
